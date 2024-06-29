@@ -1,0 +1,1800 @@
+.HeaderContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
+  align-items: center;
+  padding-left: 50px;
+  margin-right: 50px;
+  padding-right: 150px;
+}
+
+@media (max-width: 480px) {
+  .HeaderContainer {
+    padding-left: 10px;
+    padding-right: 20px;
+    height: auto;
+    margin-right: 0px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+  }
+
+  .WhatsappContainer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .WhatsappButton {
+    height: 100px;
+    width: 1500px;
+  }
+}
+
+.HomeButton,
+.ServicesButton,
+.AboutButton,
+.ProfileButton,
+.ContactButton {
+  text-decoration: none;
+  background-color: transparent;
+  color: rgb(63, 63, 63);
+  border: none;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.1s;
+}
+
+.WhatsappContainer {
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.WhatsappIcon {
+  margin-left: 20px;
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.WhatsappButton {
+  font-weight: 500;
+  margin-top: 6px;
+  border: solid;
+  width: 180px;
+  height: 40px;
+  color: white;
+  background-color: #25D366;
+  font-size: 22px;
+  border-radius: 12px;
+  transition: 0.5s;
+  border: solid;
+  border-color: rgb(7, 118, 216);
+  border-width: 2px;
+}
+
+.WhatsappButton:hover {
+  transform: scale(1.1);
+}
+
+.ContactButton:hover {
+  transform: scale(1.1);
+  color: rgb(66, 128, 185);
+  text-decoration: none;
+}
+
+.ProfileButton:hover {
+  transform: scale(1.1);
+  color: rgb(66, 128, 185);
+  text-decoration: none;
+}
+
+.HomeButton:hover {
+  transform: scale(1.1);
+  color: rgb(66, 128, 185);
+  text-decoration: none;
+}
+
+.ServicesButton:hover {
+  transform: scale(1.1);
+  color: rgb(66, 128, 185);
+  text-decoration: none;
+}
+
+.AboutButton:hover {
+  transform: scale(1.1);
+  color: rgb(66, 128, 185);
+  text-decoration: none;
+}
+
+.logo {
+  height:80px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+/*------------------------------Component 2-Slider--------------------------*/
+.carousel-item {
+  display: none;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+.fade-out {
+  animation: fadeOut 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+.animate {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.WebSlide {
+  display: grid;
+  grid-template-columns: 45% 50%;
+  background-color: rgb(18, 76, 122);
+  border: solid rgb(12, 1, 1) 1.5px;
+  height: 600px;
+  transition: transform 1s ease-out;
+}
+
+.WebSlideSubHead {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.WebSliderPara {
+  text-align: justify;
+}
+
+.HeaderContainer:hover .ImWebSlide {
+  transform: scale(1.1);
+}
+
+.WebSlideItemLeft {
+  color: aliceblue;
+  margin-top: 150px;
+  display: grid;
+  grid-template-rows: 12% 10% 80%;
+  margin-left: 150px;
+  justify-content: center;
+  transition: transform 1s ease-out;
+}
+
+.ImWebSlide:hover {
+  transform: scale(1.1);
+}
+
+.ImWebSlide {
+  height: 680px;
+  width: 510px;
+  object-fit: contain;
+  margin-top: -40px;
+  margin-left: 60px;
+  transition: 0.5s ease-out;
+}
+
+.SoftSlide {
+  height: 680px;
+  width: 510px;
+  object-fit: contain;
+  margin-top: -40px;
+  margin-left: 60px;
+  transition: 0.5s ease-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .WebSlide {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .WebSlideItemLeft {
+    margin-left: 0;
+    margin-top: 20px;
+    grid-template-rows: auto auto auto;
+  }
+
+  .ImWebSlide {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .WebSlide {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .WebSlideItemLeft {
+    margin-left: 0;
+    margin-top: 20px;
+    grid-template-rows: auto auto auto;
+  }
+
+  .ImWebSlide {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .WebSlide {
+    grid-template-columns: 1.2fr;
+    padding: 10px;
+  }
+
+  .WebSlideHead {
+    font-weight: 800;
+    font-size: larger;
+  }
+
+  .WebSlideSubHead,
+  WebSlideSubHead {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .WebSlideItemLeft {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    grid-template-rows: auto auto auto;
+  }
+
+  .ImWebSlide {
+    height: 300px;
+    width: 300px;
+    margin-left: 30px;
+    object-fit: contain;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .WebSliderPara {
+    margin-top: -5px;
+    font-size: 12px;
+  }
+}
+
+/*------------------------------Component 3-About US-------------------------*/
+.Container {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: grid;
+  grid-template-columns: 80px 600px 600px 30px;
+  background-color: rgb(255, 255, 255);
+  height: 500px;
+}
+
+.icon {
+  margin: 50px;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.AboutHeading {
+  opacity: 0;
+  font-size: 50px;
+}
+
+.AboutSubHeading {
+  font-size: 25px;
+  color: rgb(18, 64, 104);
+}
+
+.AboutPara {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.itemleft {
+  margin-top: 60px;
+  display: grid;
+  grid-template-rows: 67px 55px 100px;
+}
+
+.itemright {
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 40px 100px;
+}
+
+.itemright:hover .icon {
+  transform: scale(1.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .Container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+  }
+
+  .icon {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .itemleft {
+    margin-top: 20px;
+    grid-template-rows: auto;
+  }
+
+  .itemright {
+    margin-top: 20px;
+    grid-template-rows: auto;
+  }
+
+  .AboutHeading {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .AboutSubHeading {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .AboutPara {
+    font-size: 18px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 768px) {
+  .Container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+  }
+
+  .icon {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    margin-left: 15%;
+    margin-bottom: 20px;
+  }
+
+  .itemleft {
+    margin-top: 10px;
+    grid-template-rows: auto;
+  }
+
+  .itemright {
+    margin-top: 10px;
+    grid-template-rows: auto;
+  }
+
+  .AboutHeading {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .AboutSubHeading {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .AboutPara {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+  }
+}
+
+/* --------------------Component 4- All Services------------------- 4 */
+.ServicesContainer {
+  margin-top: 40px;
+  display: grid;
+  grid-template-rows: 100px 400px 40px 400px;
+  background-color: rgb(18, 76, 122);
+  height: 1000px;
+  width: auto;
+}
+
+.ServiceSubContainer1 {
+  margin-top: 50px;
+}
+
+.ServiceTitle {
+  margin-top: 30px;
+  margin-left: 37%;
+}
+
+.OurServiceHeading {
+  color: white;
+  letter-spacing: 7px;
+  font-size: 38px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.ServiceSubContainer1,
+.ServicesSubContainer2 {
+  display: grid;
+  grid-template-columns: 90px 370px 35px 350px 35px 370px 120px;
+}
+
+.Service01,
+.Service02,
+.Service03,
+.Service04,
+.Service05,
+.Service06 {
+  background-color: aliceblue;
+  display: grid;
+  margin-top: 0px;
+  grid-template-rows: 15% 30% 30% 30%;
+  border-radius: 5px;
+  transition: transform 0.5s ease-out;
+  opacity: 0;
+}
+
+
+.S1Item01,
+.S2Item01,
+.S4Item01,
+.S5Item01,
+.S6Item01 {
+  margin-top: 28px;
+  margin-left: 23%;
+  font-size: larger;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.S1Item02,
+.S2Item02,
+.S4Item02,
+.S5Item02,
+.S6Item02 {
+  margin-top: 30px;
+  margin-left: 45px;
+  word-spacing: 5px;
+}
+
+.Service01:hover .Webicon,
+.Service02:hover .Mobileicon,
+.Service03:hover .Softicon,
+.Service04:hover .Desktopicon,
+.Service05:hover .Graphicicon,
+.Service06:hover .Videoicon {
+  transform: scale(1.15);
+}
+
+.Mobileicon {
+  margin-left: 132px;
+  margin-top: 35px;
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.Webicon,
+.Desktopicon,
+.Videoicon,
+.Graphicicon,
+.Softicon {
+  margin-left: 145px;
+  margin-top: 35px;
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.Graphicicon {
+  margin-top: 49px;
+  height: 65px;
+  width: 65px;
+}
+
+.S1Item04,
+.S2Item04,
+.S4Item04,
+.S5Item04,
+.S6Item04 {
+  margin-top: 10px;
+  margin-left: 38%;
+}
+
+.ButtonWeb {
+  background-color: transparent;
+  color: rgb(23, 71, 143);
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .ServicesContainer {
+    height: auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .ServiceTitle {
+    margin-top: 30px;
+    margin-left: 14%;
+  }
+
+  .OurServiceHeading {
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+
+  .ServiceSubContainer1,
+  .ServicesSubContainer2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .Service01,
+  .Service02,
+  .Service03,
+  .Service04,
+  .Service05,
+  .Service06 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .ButtonWeb {
+    margin-top: 10px;
+  }
+
+  .Webicon,
+  .Videoicon,
+  .Graphicicon,
+  .Desktopicon .Softicon {
+    margin-left: 38%;
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+  }
+
+  .Mobileicon {
+    margin-left: 40%;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+  }
+
+  .Softicon {
+    margin-left: 38%;
+    height: 67px;
+    width: 67px;
+    object-fit: contain;
+  }
+
+  .Desktopicon {
+    margin-left: 38%;
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+  }
+
+  .Graphicicon {
+    margin-left: 40%;
+    margin-bottom: 10px;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+  }
+
+  .S1Item01,
+  .S2Item01,
+  .S4Item01,
+  .S5Item01,
+  .S6Item01,
+  .S1Item02,
+  .S2Item02,
+  .S4Item02,
+  .S5Item02,
+  .S6Item02,
+  .S1Item04,
+  .S2Item04,
+  .S4Item04,
+  .S5Item04,
+  .S6Item04 {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* --------------------Component 5- Web & Software Service------------------- 4 */
+.ServiceContainer {
+  background-color: rgb(234, 243, 247);
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  height: 450px;
+}
+
+.WebParaDiscription {
+  text-align: justify;
+}
+
+.ServiceItemleft {
+  margin-top: 100px;
+  margin-left: 140px;
+  display: grid;
+  grid-template-rows: 50px 35px 100px;
+}
+
+.MobileItemRight {
+  margin-top: 100px;
+  margin-left: 100px;
+  display: grid;
+  grid-template-rows: 50px 35px 100px;
+}
+
+.ImWebService {
+  transition: 0.5s ease-out;
+  height: 500px;
+  width: 500px;
+  object-fit: contain;
+  margin-left: 60px;
+}
+
+.ImMobileService {
+  height: 500px;
+  width: 500px;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .ServiceContainer {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .ServiceItemleft {
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .WebParaDiscription {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .WebHead {
+    margin-left: 35px;
+    font-size: 36px;
+  }
+
+  .WebSubHead {
+    margin-left: 55px;
+    font-size: 20px;
+  }
+
+  .ImWebService {
+    margin-left: 20px;
+    height: 350px;
+    width: 350px;
+    object-fit: contain;
+  }
+}
+
+/* --------------------Component 6- Mobile Service-------------------  */
+
+.MobileServoceContainer {
+  display: grid;
+  grid-template-columns: 42% 50%;
+  height: 470px;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.MobileServoceContainer:hover .MobileItemRight {
+  right: 0;
+}
+
+.ImDesjtopService {
+  margin-left: 175px;
+  margin-top: 20px;
+  height: 420px;
+  width: 420px;
+  object-fit: contain;
+  transition: 0.5s ease-out;
+}
+
+.ImMobileService {
+  margin-top: -30px;
+  margin-left: 110px;
+
+}
+
+.MobilePara {
+  text-align: justify;
+}
+
+.MobileItemRight {
+  margin-left: 130px;
+  transition: right 0.4s;
+}
+
+.MobileItemLeft {
+  transition: 0.5s ease-out;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .MobileServoceContainer {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .MobileServiceHead {
+    font-size: 35px;
+  }
+
+  .MobileSubHead {
+    font-size: 30px;
+  }
+
+  .ImDesjtopService,
+  .ImMobileService {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .MobileItemRight {
+    text-align: center;
+  }
+
+  .MobilePara {
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .MobileServoceContainer {
+    height: auto;
+  }
+
+  .MobileItemRight {
+    text-align: center;
+  }
+
+  .MobileSubHead {
+    font-size: 30px;
+  }
+
+  .MobilePara {
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  .DesktopSubHead {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .ImDesjtopService,
+  .ImMobileService {
+    width: 100%;
+    height: auto;
+    margin-top: -90px;
+  }
+
+  .ImDesjtopService {
+    margin-left: 15%;
+    margin-top: -50px;
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+    transition: 1s ease-out;
+  }
+
+  .MobileItemRight {
+
+    margin: 50px 5px;
+    text-align: center;
+  }
+
+  .MobileSubHead {
+    font-size: 20px;
+  }
+
+  .DesktopSubHead {
+    font-size: 20px;
+  }
+
+  .MobilePara {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+}
+
+/* --------------------Component 7- Workflow-------------------  */
+.WorkflowContainder {
+  display: grid;
+  grid-template-rows: 0.1fr 0.1fr 0.2fr;
+  height: auto;
+  background-color: rgb(223, 242, 243);
+}
+
+.ImWorkflow {
+  height: 800px;
+  width: 800px;
+  object-fit: contain;
+  transition: 0.5s ease-out;
+  opacity: 1;
+  margin-left: 200px;
+}
+
+.WorkflowHead {
+  margin-top: 50px;
+  place-self: center;
+  margin-left: 250px;
+  letter-spacing: 7px;
+  transition: 0.5s;
+}
+
+.WorkflowsubHead {
+  margin-top: 150px;
+  color: gray;
+  margin-left: 27.5%;
+  transition: ease-out 1s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .WorkflowContainder {
+    height: auto;
+    padding: 20px;
+  }
+
+  .ImWorkflow {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+
+  .WorkflowHead {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .WorkflowsubHead {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .WorkflowContainder {
+    height: auto;
+    padding: 10px;
+  }
+
+  .ImWorkflow {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .WorkflowHead {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  .WorkflowsubHead {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .WorkflowContainder {
+    margin-top: 50px;
+    height: auto;
+  }
+
+  .ImWorkflow {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    margin-left: 10px;
+  }
+
+  .WorkflowHead {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .WorkflowsubHead {
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+}
+
+/* --------------------Component 8-Analyics-------------------  */
+.AnalyticsContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.AnalyticsUpperContainer {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+}
+
+.AnalyticsLeft {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.AnalyticsNext {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.AnalyticsPara {
+  justify-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: justify;
+}
+
+.AnalyticsSubHead {
+  margin-left: -140px;
+}
+
+.AnalyticsHead {
+  margin-left: 22%;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #152F4F;
+}
+
+.AnalyticsValue {
+  font-weight: 300;
+}
+
+.AnalyticsC1:hover {
+  background-color: #cce2fc;
+}
+
+.AnalyticsC2:hover {
+  background-color: #cce2fc;
+}
+
+.AnalyticsC3:hover {
+  background-color: #cce2fc;
+}
+
+.AnalyticsC4:hover {
+  background-color: #cce2fc;
+}
+
+.AnalyticsC5:hover {
+  background-color: #cce2fc;
+}
+
+.AnalyticsBottomContainer {
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.AnalyticsColumn {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #2f8dff solid 1px;
+}
+
+.ImWebAnalytics {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.AnalyticsTitle {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1200px) {
+  .AnalyticsBottomContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .AnalyticsBottomContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .AnalyticsUpperContainer {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .AnalyticsBottomContainer {
+    height: auto;
+    display: grid;
+    margin-top: -100px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ImWebAnalytics {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .AnalyticsTitle {
+    font-size: 12px;
+  }
+
+  .AnalyticsUpperContainer {
+    height: auto;
+    grid-template-columns: 1fr;
+
+  }
+
+  .AnalyticsLeft {
+    height: auto;
+    margin-left: -10%;
+  }
+
+  .AnalyticsHead {
+    margin-left: 12%;
+    font-size: 25px;
+    color: #152F4F;
+    font-weight: 700;
+  }
+
+  .AnalyticsNext {
+    height: auto;
+    margin-top: -200px;
+
+  }
+
+  .AnalyticsPara {
+    margin-top: 5px;
+    margin-left: 4.5%;
+    margin-right: 4.5%;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+}
+
+
+/* --------------------Component 9-Project-------------------  */
+.ProjectContainer {
+  background-color: rgb(18, 76, 122);
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10px auto auto auto auto auto;
+  padding: 20px;
+}
+
+.ProjectLine {
+  margin-top: 50px;
+}
+
+.Line {
+  background-color: azure;
+}
+
+.ProjectHead {
+  color: whitesmoke;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  transition: 1s ease-out;
+  opacity: 0;
+}
+
+
+.ProjectButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: -40px;
+}
+
+.ProjectDisplayContainer {
+  background-color: rgb(8, 36, 58);
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: justify;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.ProjectImContainer {
+  background-color: rgb(182, 220, 253);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImProject {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+
+.ProjectDiscription {
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 16px;
+  transition: 1s;
+  text-align: justify;
+}
+
+.Project1,
+.Project2,
+.Project3,
+.Project4,
+.Project5 {
+  background-color: transparent;
+  border: none;
+  color: rgb(254, 255, 255);
+  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+  border: solid #e3edf8 1px;
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  max-width: 190px;
+  margin: 15px auto;
+  transition: transform 0.3s;
+}
+
+.Project1:hover,
+.Project2:hover,
+.Project3:hover,
+.Project4:hover,
+.Project5:hover {
+  background-color: rgb(5, 26, 70);
+  transform: scale(1.05);
+}
+
+.ProjectDisplayContainer1 {
+  display: grid;
+  grid-template-rows: 100px auto;
+  background-color: #152F4F;
+}
+
+.ProjectDisplayDicp {
+  color: #e3edf8;
+  margin: 30px;
+}
+
+.ProjectHeadin {
+  color: aliceblue;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+@media (min-width: 768px) {
+  .ProjectDisplayContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ImProject {
+    margin: 80px auto 30px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ProjectContainer {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .Project1,
+  .Project2,
+  .Project3,
+  .Project4,
+  .Project5 {
+    width: 170px;
+    font-size: 14px;
+  }
+
+  .ProjectHeadin {
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .ProjectDisplayContainer1 {
+    display: grid;
+    grid-template-rows: 20px 250px
+  }
+
+  .ProjectDiscription {
+    text-align: justify;
+    font-size: 13px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .ImProject {
+    padding: 40px;
+  }
+
+  .ProjectHead {
+    font-size: 18px;
+    margin-top: 50px;
+    letter-spacing: 4px;
+    margin-left: 1px;
+  }
+
+  .ProjectContainer:hover .ProjectHead {
+    font-size: 18px;
+    margin-top: 50px;
+    letter-spacing: 4px;
+    word-spacing: 0px;
+  }
+
+  .ProjectButtons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: -50px;
+  }
+
+  .ProjectDisplayDicp {
+    font-size: 14px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+
+/* --------------------Component 10-Profile-------------------  */
+.ProfileContainer {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr;
+  height: auto;
+}
+
+.ProfileItemLeft {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 100px;
+  opacity: 1;
+  transition: 0.5s ease-out;
+}
+
+.ProfileHead2 {
+  text-align: justify;
+}
+
+.ProfileButton2 {
+  margin-top: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  background-color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+  height: 35px;
+}
+
+.ProfileButton2:hover {
+  background-color: #152F4F;
+  color: #cce2fc;
+  border: solid white 3px;
+}
+
+.ProfileHead1 {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.ProfileItemNext {
+  display: grid;
+  grid-template-rows: 0.1fr;
+  place-items: center;
+  background-color: rgb(243, 250, 253);
+  margin-top: 100px;
+}
+
+.ImProfile {
+  width: 650px;
+  height: 650px;
+  object-fit: contain;
+  transition: 0.5s ease-out;
+  opacity: 0;
+  margin-top: 120px;
+  place-self: center;
+}
+
+@media (max-width: 480px) {
+  .ProfileContainer {
+    place-items: center;
+  }
+
+  .ProfileItemLeft {
+    margin-left: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .ProfileHead3 {
+    margin-right: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #17355a;
+  }
+
+  .profileHead2 {
+    text-align: justify;
+    font-size: 16px;
+    margin-right: 40px;
+  }
+
+  .ProfileContainer:hover .Taptoview {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .ProfileItemNext:hover .Taptoview1 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .ImProfile {
+    margin-top: 120px;
+    height: 400px;
+    width: 400px;
+    margin-left: -20px;
+    object-fit: contain;
+  }
+
+}
+
+/* --------------------Component 11-Values-------------------  */
+.ValuesContainer {
+  height: 700px;
+  display: grid;
+  grid-template-rows: 150px auto;
+  border: solid rgb(237, 243, 253);
+  border-width: 2px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.Valuesline {
+  color: #08203d;
+  height: 1px;
+}
+
+.ValuesUpperContainer {
+  display: grid;
+  grid-template-rows: 0.5fr 0.1fr;
+  margin-top: 25px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Impact';
+  color: rgb(228, 242, 253);
+  letter-spacing: 10px;
+}
+.ValuesOUR{
+  color: #1c5eaf;
+}
+
+.ValuesBottomContainer {
+  margin-top: 40px;
+  font-size: 50px;
+  margin-bottom: 100px;
+  margin-left: 19%;
+  margin-right: 12%;
+  letter-spacing: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(38, 83, 143);
+  transition: 2s ease-out;
+  text-align: center;
+  position: relative;
+}
+
+.slide-in {
+  animation: slideIn 1s forwards;
+}
+
+.slide-out {
+  animation: slideOut 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ValuesContainer {
+    height: 600px;
+  }
+
+  .ValuesUpperContainer {
+    font-size: 18px;
+  }
+
+  .ValuesBottomContainer {
+    font-size: 20px;
+    margin-left: 10%;
+  }
+}
+
+
+
+/*--------------------Component 13-Footer-----------------*/
+.footer {
+  background: #152F4F;
+  color: white;
+
+  .links {
+    ul {
+      list-style-type: none;
+    }
+
+    li a {
+      color: white;
+      transition: color .2s;
+
+      &:hover {
+        text-decoration: none;
+        color: #4180CB;
+      }
+    }
+  }
+
+
+  .about-company {
+    i {
+      font-size: 25px;
+    }
+
+    a {
+      color: white;
+      transition: color .2s;
+
+      &:hover {
+        color: #4180CB
+      }
+    }
+  }
+
+  .location {
+    i {
+      font-size: 18px;
+    }
+
+    margin-top: 30px;
+  }
+
+  .copyright p {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+  }
+}
+/*-----------------------------------NEW PROJECTS-----------------------------------*/
+
+.NewProjectSubHead {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.NewProjectsHead {
+  font-weight: 700;
+  color: #17365c;
+  letter-spacing: 2px;
+}
+
+.Newprojects {
+  display: grid;
+  background-color: rgb(234, 243, 247);
+  height: auto;
+  grid-template-rows: auto auto;
+  padding: 20px;
+}
+.ProjectsPara {
+  text-align: justify;
+}
+
+.ProjectsUpper {
+  margin: 12%;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.NewProjectsBottom {
+  height: 410px;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  margin-top: 70px;
+  grid-template-columns: 0.5fr 1fr;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px #08203d solid;
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+
+.ImProjectDisplay {
+  border-radius: 5px;
+  margin-left: 17px;
+  margin-right: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 95%;
+  object-fit: contain;
+}
+
+.Improjectlo {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.NewProjectType {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ProjectsDisplayLeft {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.Navigateicons {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.ProjectCircles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+}
+
+.circle1, .circle2, .circle3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #08203d;
+  transition: 0.2s ease-out;
+}
+
+.Newprojectdiscprition {
+  margin: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.NewProjectTitle {
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #cce2fc;
+}
+
+.NewProjectViewButton:hover {
+  background-color: #08203d;
+  color: #e3edf8;
+}
+
+.NewProjectViewButton {
+  margin: 15px;
+  padding: 5px;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  border: 1px black solid;
+}
+
+.ProjectsDisplayNext {
+  background-color: #08203d;
+  display: grid;
+  grid-template-rows: 20px auto;
+}
+
+@media (max-width: 768px) {
+  .NewProjectsBottom {
+    grid-template-columns: 1fr;
+    margin: 5%;
+  }
+
+  .ImProjectDisplay {
+    width: 100%;
+  }
+
+  .ProjectsUpper {
+    margin: 5%;
+  }
+
+  .NewProjectsHead {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ProjectsUpper {
+    margin: 5%;
+  }
+
+  .NewProjectsBottom {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 70px;
+  }
+
+  .ProjectsPara {
+    font-size: 13px;
+  }
+  .ImProjectDisplay{
+    margin-top: 15px;
+    margin-left: 8px;
+    width: 95%;
+  }
+
+  .NewProjectsHead {
+    letter-spacing: 0px;
+    font-size: 20px;
+  }
+
+  .ProjectsDisplayLeft {
+    margin: 10px;
+  }
+
+  .Newprojectdiscprition {
+    font-size: 12px;
+  }
+
+  .NewProjectTitle {
+    font-size: 18px;
+  }
+}
