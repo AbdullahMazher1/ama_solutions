@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AbdullahMazher1/ama_solutions.git/static/css/main.2ba95f9f.css",
-    "main.js": "/AbdullahMazher1/ama_solutions.git/static/js/main.b11cd9f2.js",
-    "static/js/453.ed3810f9.chunk.js": "/AbdullahMazher1/ama_solutions.git/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/AbdullahMazher1/ama_solutions.git/index.html",
-    "main.2ba95f9f.css.map": "/AbdullahMazher1/ama_solutions.git/static/css/main.2ba95f9f.css.map",
-    "main.b11cd9f2.js.map": "/AbdullahMazher1/ama_solutions.git/static/js/main.b11cd9f2.js.map",
-    "453.ed3810f9.chunk.js.map": "/AbdullahMazher1/ama_solutions.git/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/https://abdullahmazher1.github.io/ama_solutions/static/css/main.2ba95f9f.css",
+    "main.js": "/https://abdullahmazher1.github.io/ama_solutions/static/js/main.a83d20a9.js",
+    "static/js/453.ed3810f9.chunk.js": "/https://abdullahmazher1.github.io/ama_solutions/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/https://abdullahmazher1.github.io/ama_solutions/index.html",
+    "main.2ba95f9f.css.map": "/https://abdullahmazher1.github.io/ama_solutions/static/css/main.2ba95f9f.css.map",
+    "main.a83d20a9.js.map": "/https://abdullahmazher1.github.io/ama_solutions/static/js/main.a83d20a9.js.map",
+    "453.ed3810f9.chunk.js.map": "/https://abdullahmazher1.github.io/ama_solutions/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ba95f9f.css",
-    "static/js/main.b11cd9f2.js"
+    "static/js/main.a83d20a9.js"
   ]
 }
